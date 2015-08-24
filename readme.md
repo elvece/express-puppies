@@ -2,8 +2,6 @@
 
 ***This repo contains my solution to the following exercise:***
 
-![](http://www.unitedwaynorman.org/sites/unitedwaynorman.org/files/cutepuppy.jpg)
-
 ### Background
 
 Your task is to build an application that allows the user to see a list of puppies (in JSON) as well as add and see individual puppies. You should use an array of objects to create and display puppies, where each object represents a puppy. Each puppy should have an id which increments, a name, and an age.
