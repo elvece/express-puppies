@@ -8,5 +8,14 @@ function Puppy(puppyID, puppyName, puppyAge){
   this.puppyAge = puppyAge;
 }
 
+//data
+var tempPuppyArray = [];
+var bartPuppy = new Puppy(1, 'Bart', 20);
+var johnPuppy = new Puppy(2, 'John', 10);
+var danPuppy = new Puppy(3, 'Dan', 4);
+tempPuppyArray.push(bartPuppy, johnPuppy, danPuppy);
 
-module.exports = Puppy;
+module.exports = {
+  Puppy: Puppy,
+  tempPuppyArray: tempPuppyArray
+};
