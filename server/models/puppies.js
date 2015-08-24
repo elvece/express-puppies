@@ -7,3 +7,6 @@ function Puppy(puppyID, puppyName, puppyAge){
   this.puppyName = puppyName;
   this.puppyAge = puppyAge;
 }
+
+
+module.exports = Puppy;
