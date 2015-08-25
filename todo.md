@@ -1,6 +1,7 @@
 ## Express Puppies
 
 ##To do:
+1. Refactor puppyUtility.js
 1. Add front end for handling every request (forms)
 1. Add Mongo
 1. Add jQuery

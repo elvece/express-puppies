@@ -1,4 +1,4 @@
-## Intro to Express and CRUD ... with puppies!
+## Intro to Express and CRUD
 
 ***This repo contains my solution to the following exercise:***
 
