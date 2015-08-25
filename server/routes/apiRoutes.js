@@ -17,7 +17,11 @@ router.get('/puppy/:id', function(req, res, next) {
 //POST - single puppy
 router.post('/puppies', function(req, res, next){
   var response = utility.handlePost(req.body.puppyID, req.body.puppyName, req.body.puppyAge);
-  res.json(response);
+  if (response.error)
+    //refactor for correct error message
+    res.status(500).json(response);
+  else
+    res.json(response);
 });
 
 //PUT - single puppy

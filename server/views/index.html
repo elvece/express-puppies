@@ -2,13 +2,32 @@
 
 {% block title %}{% endblock %}
 
-
 {% block content %}
 
   <div class="container">
 
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+    <h1>Add a Puppy!</h1>
+
+    <form>
+      <div class="form-group">
+        <input type="number" class="form-control" id="puppy-id" placeholder="Enter an ID...">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="puppy-name" placeholder="Enter puppy's name...">
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" id="puppy-age" placeholder="Enter puppy's age...">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+    <br><br>
+
+    <div class="alert alert-success" role="alert" id="success-message">
+    </div>
+
+    <div class="alert alert-danger" role="alert" id="error-message">
+    </div>
 
   </div>
 

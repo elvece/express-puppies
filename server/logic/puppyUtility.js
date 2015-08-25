@@ -5,6 +5,13 @@ function handleAllGet(){
   return tempArray;
 }
 
+//helper method
+function puppyFilter(puppyID){
+  return tempArray.filter(function(puppy){
+    return puppy.puppyID === parseInt(puppyID);
+  });
+}
+
 function handleSingleGet (puppyID){
   var response;
   var pup = puppyFilter(puppyID);
@@ -15,19 +22,12 @@ function handleSingleGet (puppyID){
   }
 }
 
-//helper method
-function puppyFilter(puppyID){
-  return tempArray.filter(function(puppy){
-    return puppy.puppyID === parseInt(puppyID);
-  });
-}
-
 function handlePost(puppyID, puppyName, puppyAge){
   var pup = puppyFilter(puppyID);
   //does the puppy already exist
-  //if yes,throw error
+  //if yes, throw error
   if (pup.length > 0){
-    return {message: "Puppy already exists!"};
+    return {error: "Puppy already exists!"};
   } else { //if no, return success
     var newPostPuppy = new puppyData.Puppy(
       parseInt(puppyID),
@@ -36,7 +36,7 @@ function handlePost(puppyID, puppyName, puppyAge){
       );
     tempArray.push(newPostPuppy);
     return {
-      message:'success',
+      message:'Puppy added successfully!',
       puppy:newPostPuppy
     };
   }
