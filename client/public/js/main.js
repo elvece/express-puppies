@@ -52,7 +52,7 @@ function getPuppies(){
   .done(function(data){
     data.forEach(function(puppy){
       $('#results').prepend(
-        '<p><a href="/puppy/'+puppy.puppyID+'">'+puppy.puppyName+'</a></p>');
+        '<p><a href="/gpuppy/'+puppy.puppyID+'">'+puppy.puppyName+'</a></p>');
     });
   });
   // .fail(function(jqXHR, err){
